@@ -1,0 +1,9 @@
+@use "../util/" as *;
+
+h1 {
+	font-size: 2rem;
+
+	@include breakpoint(medium) {
+		font-size: 3rem;
+	}
+}

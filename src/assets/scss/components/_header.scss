@@ -1,0 +1,23 @@
+@use "../util/" as *;
+
+.header {
+	margin-top: 5rem;
+	&__logo {
+		width: 15rem;
+	}
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__links {
+		display: none;
+
+		@include breakpoint(medium) {
+			display: flex;
+			gap: 2.5rem;
+			justify-content: space-between;
+		}
+	}
+}

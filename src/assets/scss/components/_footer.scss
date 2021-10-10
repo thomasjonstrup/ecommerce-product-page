@@ -1,0 +1,29 @@
+@use "../globals/colors.scss";
+
+.footer {
+	&__graphic {
+		vertical-align: middle;
+	}
+
+	&__content {
+	}
+
+	h3 {
+		text-transform: uppercase;
+	}
+
+	&__logo {
+		filter: brightness(0) invert(1);
+		width: 20rem;
+	}
+
+	&__item {
+		display: flex;
+		gap: 2rem;
+	}
+
+	&__socials {
+		display: flex;
+		gap: 2rem;
+	}
+}

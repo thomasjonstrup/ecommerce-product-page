@@ -1,0 +1,137 @@
+/* @use '../util/' as *;
+@use '../globals/' as *;
+
+.card {
+	background: $dark-blue;
+	border-radius: 1rem;
+	overflow: hidden;
+
+	&__full {
+		height: 100%;
+	}
+
+	width: 100%;
+
+	&__user {
+		padding: 2rem;
+		background-color: $primary-color;
+		border-radius: 1rem;
+
+		&-description {
+			padding: 2rem;
+		}
+	}
+
+	&__tab {
+		color: $pale-blue;
+		&--active {
+			color: white;
+		}
+	}
+
+	&__bottom {
+		padding: 2rem;
+		display: flex;
+		justify-content: space-between;
+
+		@include breakpoint(medium) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__plan {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 300;
+	}
+
+	&__image {
+		width: 8rem;
+		height: 8rem;
+		border-radius: 50%;
+		border: 3px solid white;
+	}
+
+	&__top {
+		padding: 2rem;
+		display: flex;
+		justify-content: flex-end;
+		&--work {
+			background-color: $light-red;
+		}
+		&--play {
+			background-color: $soft-blue;
+		}
+		&--study {
+			background-color: $light-red-study;
+		}
+		&--exercise {
+			background-color: $lime-green;
+		}
+		&--social {
+			background-color: $violet;
+		}
+		&--self-care {
+			background-color: $soft-orange;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 2rem;
+		align-items: center;
+	}
+	&__times {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 2rem;
+		align-items: center;
+
+		@include breakpoint(medium) {
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 2rem;
+			align-items: flex-start;
+		}
+	}
+
+	&__icon {
+		height: 7rem;
+		position: relative;
+		margin-top: -25px;
+	}
+
+	&__description {
+		font-weight: 300;
+		font-size: 3.2rem;
+	}
+
+	&__small-description {
+		font-weight: 300;
+		font-size: 1.8rem;
+		color: $pale-blue;
+	}
+
+	&__content {
+		padding: 2rem;
+
+		margin-top: -40px;
+		position: relative;
+		border-radius: 10px;
+		padding-left: 20px;
+		padding-bottom: 30px;
+		background: $dark-blue;
+	}
+	&__footer {
+		padding: 2rem;
+	}
+}
+ */
