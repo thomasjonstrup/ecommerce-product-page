@@ -144,6 +144,7 @@ $space-prefixes: (
 .flex-row {
 	display: flex;
 	flex-direction: column;
+	gap: 4rem;
 
 	@include breakpoint(medium) {
 		flex-direction: row;
