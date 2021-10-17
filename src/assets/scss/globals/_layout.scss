@@ -32,8 +32,11 @@ body {
 }
 
 .container {
-	padding: 0 3rem;
-	max-width: 1200px;
+	@include breakpoint(medium) {
+		padding: 0 3rem;
+		max-width: 1200px;
+	}
+
 	margin: 0 auto;
 }
 
@@ -148,6 +151,8 @@ $space-prefixes: (
 
 	.col {
 		align-self: center;
+	}
+	.col-p {
 		padding: 2rem;
 	}
 }
@@ -276,6 +281,18 @@ $space-prefixes: (
 
 .icon-cart {
 	width: 2rem;
+	position: relative;
+
+	span {
+		position: absolute;
+		padding: 1px 8px;
+		font-size: 1.1rem;
+		color: colors.$white;
+		background-color: colors.$primary;
+		border-radius: 20px;
+		top: -5px;
+		left: 14px;
+	}
 }
 
 .avatar {
@@ -289,4 +306,14 @@ $space-prefixes: (
 .price-striked {
 	color: colors.$grayish-blue;
 	text-decoration: line-through;
+}
+
+.cart {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__image {
+		width: 6rem;
+	}
 }

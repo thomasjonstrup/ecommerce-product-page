@@ -1,14 +1,77 @@
 @use "../util/" as *;
 
 .header {
-	margin-top: 5rem;
+	position: relative;
+	@include breakpoint(medium) {
+		margin-top: 5rem;
+	}
+
+	&__menu {
+		@include breakpoint(medium) {
+			display: none;
+		}
+	}
+
 	&__logo {
-		width: 15rem;
+		width: 10rem;
+		@include breakpoint(medium) {
+			width: 15rem;
+		}
 	}
 	&__nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 1.2rem;
+	}
+
+	&__cart {
+		position: relative;
+	}
+
+	.cart {
+		opacity: 0;
+		position: absolute;
+		bottom: 0;
+		right: 25px;
+		top: 8rem;
+		z-index: 2;
+		overflow: hidden;
+		height: 72px;
+		width: 72px;
+		border-radius: 0.25em;
+		transition: opacity 0.2s ease-in;
+		background: #fff;
+		box-shadow: 0 4px 30px rgb(0 0 0 / 17%);
+		pointer-events: auto;
+		display: flex;
+		flex-direction: column;
+		width: 350px;
+		height: 300px;
+		z-index: 1;
+		/* 			width: 350px;
+			height: 300px;
+			position: absolute;
+			background: #fff;
+
+			box-shadow: 0 5px 15px 2px rgb(34 60 80 / 20%);
+			transition: opacity 0.2s ease-in;
+			pointer-events: none;
+			z-index: 1;
+
+			width: 90vw;
+			top: 65px;
+			right: 0;
+			left: 0;
+			padding: 0;
+			margin: 0;
+			border-radius: 10px;
+			font-size: 17px;
+			height: 250px; */
+
+		&--show {
+			opacity: 1;
+		}
 	}
 
 	&__links {
